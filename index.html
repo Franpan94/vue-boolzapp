@@ -43,7 +43,7 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat" class="ms_width-input">
                     </div>
                     <div v-for="(element) in contacts">
-                        {<img :src="currentimage(element)" alt="Img" class="ms_img">}
+                        <img :src="currentimage(element)" alt="Img" class="ms_img">
                         <span>{{ element.name }}</span>
                     </div>
                 </div>
