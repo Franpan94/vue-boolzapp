@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <title>Document</title>
+    <title>BoolZapp</title>
 </head>
 <body>
     <div class="ms_bg" id="root">
@@ -27,7 +27,7 @@
                            <i class="fa-solid fa-ellipsis-vertical ms_icon-width"></i>
                       </div>
                    </div>
-                   <div class="ms_bg-active-notifications p-3">
+                   <div class="ms_bg-active-notifications p-3 ">
                        <div class="ms_bg-white ms_inline ms_middle">
                           <i class="fa-solid fa-bell-slash ms_icon-width-2"></i>
                         </div>
@@ -38,18 +38,20 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="pt-3 pb-3 ms_bg_v-for">
                         <i class="fa-solid fa-magnifying-glass ms_link ms_cursor ms_pl-1"></i>
                         <input type="text" placeholder="Cerca o inizia una nuova chat" class="ms_width-input">
                     </div>
-                    <div v-for="(element) in contacts">
+                    <div v-for="(element) in contacts" class="p-2 ms_bg_v-for">
                         <img :src="currentimage(element)" alt="Img" class="ms_img">
                         <span>{{ element.name }}</span>
                     </div>
                 </div>
-                <div class="col-md-8 col-lg-8">
-                   fhskdhfks 
+                <div class="col-md-8 col-lg-8 ms_bg-3 ">
+                    <div class="ms_bg-img2"></div>
                 </div>
+                    
+                
             </div>
         </div>
     </div>

@@ -1,3 +1,7 @@
+body{
+    background-color: lightgray;
+}
+
 .ms_bg{
     background-color: rgb(6, 122, 111);
     height: 30vh;
@@ -74,3 +78,23 @@
 .ms_pl-1{
     padding-left: 20px;
 }
+
+.ms_bg-img2{
+    background-color: lightgray;
+    height: 18vh;
+    margin-left: -12px;
+    width: 880px;
+    border-left: 1px solid grey;
+}
+
+.ms_bg-3{
+    background-image: url(../img/mine.jpg);
+    height: 170vh;
+    margin-left: -12px;
+}
+
+.ms_bg_v-for{
+    background-color: white;
+}
+
+
