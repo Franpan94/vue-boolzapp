@@ -1,0 +1,20 @@
+.ms_bg{
+    background-color: rgb(6, 122, 111);
+    height: 30vh;
+}
+
+.ms_heigth{
+    height: 100%;
+}
+
+.ms_img{
+   width: 100px;
+   height: 100px;
+   object-fit: fill;
+   border-radius: 50%;
+}
+
+.ms_bg-img{
+    background-color: lightgray;
+    height: 30vh;
+}
