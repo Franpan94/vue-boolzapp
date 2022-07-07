@@ -16,5 +16,61 @@
 
 .ms_bg-img{
     background-color: lightgray;
-    height: 30vh;
+    height: 18vh;
+}
+
+.ms_icon-width{
+    width: 1.5rem;
+    color: grey;
+}
+
+.ms_cursor{
+    cursor: pointer;
+}
+
+.ms_pt-43{
+    padding-top: 43px;
+}
+
+.ms_bg-active-notifications{
+    background-color: rgb(142, 218, 252);
+    height: 13vh;
+}
+
+.ms_bg-white{
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+.ms_icon-width-2{
+    color: rgb(142, 218, 252);
+    cursor: pointer; 
+    display: flex;
+    justify-content: center;
+    padding: 13px;
+}
+
+.ms_inline{
+    display: inline-block;
+}
+
+.ms_link{
+    color: grey;
+}
+
+.ms_middle{
+    vertical-align: middle;
+}
+
+.ms_width-input{
+    width: 90%;
+    height: 40px;
+    border: 0;
+}
+
+.ms_pl-1{
+    padding-left: 20px;
 }
