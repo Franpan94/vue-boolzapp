@@ -187,10 +187,15 @@ const app = new Vue ({
 
         },
 
-        currentmex: function (newmessage,i){
+        currentmex: function (){
             
-        
-                this.contacts[this.activeindex].messages.push(newmessage);
+            const obj = {
+                date: '',
+                message: this.mex,
+                status: 'sent',
+            }
+            
+            this.contacts[this.activeindex].messages.push(obj);
             
         }
     }
