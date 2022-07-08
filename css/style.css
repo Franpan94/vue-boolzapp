@@ -114,12 +114,11 @@ body{
 
 .ms_pt8{
     padding-top: 80px;
-    padding-right: 60px;
 }
 
-.ms_pt-1_pr-8{
-    padding-top: 10px;
+.ms_p{
     padding-right: 60px;
+    padding-bottom: 10px;
 }
 
 .message-received{
