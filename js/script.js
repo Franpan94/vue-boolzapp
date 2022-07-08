@@ -4,6 +4,8 @@ const app = new Vue ({
 
     data: {
 
+        replymessage:'',
+
         activeindex: 0,
 
         mex: '',
@@ -188,15 +190,31 @@ const app = new Vue ({
         },
 
         currentmex: function (){
-            
-            const obj = {
-                date: '',
-                message: this.mex,
-                status: 'sent',
+
+            if(this.mex === ''){
+
+            } else{
+                const obj = {
+                    date: '',
+                    message: this.mex,
+                    status: 'sent',
+                }
+                
+                this.contacts[this.activeindex].messages.push(obj);
+                this.mex ='';
             }
-            
-            this.contacts[this.activeindex].messages.push(obj);
-            
+
+              this.replymessage = setTimeout (function() {
+
+                const secondobj = {
+                    date: '',
+                    message: 'Ok',
+                    status: 'received',
+                }
+
+                this.contacts[this.activeindex].messages.push(secondobj);
+
+            },1000);
         }
     }
 })
