@@ -45,16 +45,21 @@
                     <div v-for="(element, index) in contacts" 
                         class="p-2 ms_bg_v-for ms_cursor"
                         :class="{active: index === activeindex}"
-                        @click="">
+                        @click="currentimage(index)">
                         <img :src="listimage(element)" alt="Img" class="ms_img">
                         <span>{{ element.name }}</span>
                     </div>
                 </div>
                 <div class="col-md-8 col-lg-8 ms_bg-3">
                     <div class="ms_bg-img2">
-                        <i class="fa-solid fa-magnifying-glass ms_link ms_cursor ms_pl-1"></i>
+                        <div class="ms_pl-1">
+                            <img :src="listimage(contacts[activeindex])" alt="Img" class="ms_img">
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass ms_link ms_cursor ms_pl-1"></i>
                         <i class="fa-solid fa-paperclip ms_link ms_cursor ms_pl-5"></i>
                         <i class="fa-solid fa-ellipsis-vertical ms_icon-width ms_pl-5 ms_cursor"></i>
+                        </div>
                     </div>
                     <div class="ms_pt8">
                        

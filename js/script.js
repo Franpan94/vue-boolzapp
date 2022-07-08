@@ -179,7 +179,7 @@ const app = new Vue ({
             
         },
 
-        currentimage: fuction (currentindex){
+        currentimage: function (currentindex){
 
             this.activeindex = currentindex;
 
