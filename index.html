@@ -19,7 +19,7 @@
 <body>
     <div class="ms_bg" id="root">
         <div class="container pt-4">
-            <div class="row ">
+            <div class="row ms_height-row">
                 <div class="col-md-4 col-lg-4">
                     <div class="w-100 ms_heigth ms_bg-img p-2 d-flex justify-content-between">
                         <div>
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 col-lg-8 ms_bg-3 ms_position-relative">
+                <div class="col-md-8 col-lg-8 ms_bg-3 ">
                     <div class="ms_bg-img2">
                         <div class="ms_pl-1">
                             <img :src="listimage(contacts[activeindex])" alt="Img" class="ms_img">
@@ -77,7 +77,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ms_bg-input ms_position-absolute ms_d-flex">
+                    <div class="ms_bg-input ms_position-fixed ms_d-flex">
                         <i class="fa-regular fa-face-smile ms_link2 ms_cursor"></i>
                         <div class="ms_pl-1">
                             <input type="text" class="border" v-model="mex" @keyUp.enter="currentmex">

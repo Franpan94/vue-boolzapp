@@ -4,7 +4,7 @@ const app = new Vue ({
 
     data: {
 
-        replymessage:'',
+        
 
         activeindex: 0,
 
@@ -203,8 +203,10 @@ const app = new Vue ({
                 this.contacts[this.activeindex].messages.push(obj);
                 this.mex ='';
             }
+            
+            let replymessage;
 
-              this.replymessage = setTimeout (function() {
+             replymessage = setTimeout (() => {
 
                 const secondobj = {
                     date: '',
