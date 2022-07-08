@@ -42,8 +42,11 @@
                         <i class="fa-solid fa-magnifying-glass ms_link ms_cursor ms_pl-1"></i>
                         <input type="text" placeholder="Cerca o inizia una nuova chat" class="ms_width-input">
                     </div>
-                    <div v-for="(element) in contacts" class="p-2 ms_bg_v-for ms_cursor">
-                        <img :src="currentimage(element)" alt="Img" class="ms_img">
+                    <div v-for="(element, index) in contacts" 
+                        class="p-2 ms_bg_v-for ms_cursor"
+                        :class="{active: index === activeindex}"
+                        @click="">
+                        <img :src="listimage(element)" alt="Img" class="ms_img">
                         <span>{{ element.name }}</span>
                     </div>
                 </div>

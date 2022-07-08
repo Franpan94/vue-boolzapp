@@ -101,6 +101,10 @@ body{
     background-color: white;
 }
 
+.active{
+    background-color: lightgrey;
+}
+
 .ms_pl-5{
     padding-left: 10px;
 }

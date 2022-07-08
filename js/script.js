@@ -3,6 +3,9 @@ const app = new Vue ({
     el: '#root',
 
     data: {
+
+        activeindex: 0,
+
         contacts: [
             {
                 name: 'Michele',
@@ -170,10 +173,16 @@ const app = new Vue ({
 
     methods: {
 
-        currentimage: function (newelement){
+        listimage: function (newelement){
             
             return './img/' + 'avatar' + newelement.avatar + '.jpg' ;
             
+        },
+
+        currentimage: fuction (currentindex){
+
+            this.activeindex = currentindex;
+
         }
     }
 })
