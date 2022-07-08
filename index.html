@@ -55,15 +55,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 col-lg-8 ms_bg-3">
+                <div class="col-md-8 col-lg-8 ms_bg-3 ms_position-relative">
                     <div class="ms_bg-img2">
                         <div class="ms_pl-1">
                             <img :src="listimage(contacts[activeindex])" alt="Img" class="ms_img">
+                            <span class="ms_pl-5">{{ contacts[activeindex].name }}</span>
                         </div>
-                        <div>
-                            <i class="fa-solid fa-magnifying-glass ms_link ms_cursor ms_pl-1"></i>
-                            <i class="fa-solid fa-paperclip ms_link ms_cursor ms_pl-5"></i>
-                            <i class="fa-solid fa-ellipsis-vertical ms_icon-width ms_pl-5 ms_cursor"></i>
+                        <div class="ms_cursor">
+                            <i class="fa-solid fa-magnifying-glass ms_link ms_pl-1"></i>
+                            <i class="fa-solid fa-paperclip ms_link ms_pl-5"></i>
+                            <i class="fa-solid fa-ellipsis-vertical ms_icon-width ms_pl-5"></i>
                         </div>
                     </div>
                     <div class="ms_pt8">
@@ -76,8 +77,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ms_bg-input">
-                        ihohoh
+                    <div class="ms_bg-input ms_position-absolute ms_d-flex">
+                        <i class="fa-regular fa-face-smile ms_link2 ms_cursor"></i>
+                        <div class="ms_pl-1">
+                            <input type="text" class="border" v-model.trim="mex" @keyUp.enter="currentmex(mex)">
+                        </div>
+                        <div class="ms_pl-1">
+                            <i class="fa-solid fa-microphone ms_link2 ms_cursor"></i>
+                        </div>
                     </div>
                 </div>
 

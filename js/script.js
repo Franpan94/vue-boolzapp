@@ -6,6 +6,8 @@ const app = new Vue ({
 
         activeindex: 0,
 
+        mex: '',
+
         contacts: [
             {
                 name: 'Michele',
@@ -183,6 +185,13 @@ const app = new Vue ({
 
             this.activeindex = currentindex;
 
+        },
+
+        currentmex: function (newmessage,i){
+            
+        
+                this.contacts[this.activeindex].messages.push(newmessage);
+            
         }
     }
 })

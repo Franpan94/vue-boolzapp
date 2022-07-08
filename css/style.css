@@ -93,7 +93,7 @@ body{
 
 .ms_bg-3{
     background-image: url(../img/mine.jpg);
-    height: 900px;
+    height: 910px;
     margin-left: -12px;
 }
 
@@ -147,7 +147,32 @@ body{
     background-color: rgb(240, 236, 233);
     margin-left: -11px;
     width: 878px;
-    display: flex;
-    align-items: flex-end;
+    height: 70px;
 }
 
+.ms_position-relative{
+    position: relative;
+}
+
+.ms_position-absolute{
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+}
+
+.ms_link2{
+    color: gray;
+}
+
+.ms_d-flex{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.border{
+    border: 0;
+    border-radius: 10px;
+    height: 60px;
+    width: 738px;
+}
