@@ -12,9 +12,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-    crossorigin="anonymous"></script>
+   
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>BoolZapp</title>
 </head>
@@ -59,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 col-lg-8 ms_bg-3 ">
+                <div class="col-md-8 col-lg-8 ms_bg-3 ms_hidden">
                     <div class="ms_bg-img2">
                         <div class="ms_pl-1">
                             <img :src="listimage(contacts[activeindex])" alt="Img" class="ms_img">
@@ -74,8 +72,8 @@
                     <div class="ms_pt8">
                         <div  v-for="(selectelement, i) in contacts[activeindex].messages">
                             <div class="d-flex justify-content-end ms_p"  v-if="selectelement.status === 'sent'">
-                                <div class="message-sent ms_inline">{{ selectelement.message }}
-                                    <div class="dropdown ms_inline">
+                                <div class="message-sent ms_inline ms_position-relative">{{ selectelement.message }}
+                                    <div class="dropdown ms_inline ms_position-absolute">
                                         <button class="btn btn-secondary dropdown-toggle ms_radius2" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"></button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                           <button class="dropdown-item" type="button" @click="deletemessage(i)">Elimina messaggio</button>
@@ -84,9 +82,9 @@
                                     <div class="ms_date text-end">{{ selectelement.date }}</div>
                                 </div> 
                             </div>
-                             <div class="d-flex justify-content-start ms_pt-2 ms_pl-1" v-else="selectelement.status === 'received'">
-                                <div class="message-received ms_inline" >{{ selectelement.message }}
-                                   <div class="dropdown ms_inline">
+                            <div class="d-flex justify-content-start ms_pt-2 ms_pl-1" v-else="selectelement.status === 'received'">
+                                <div class="message-received ms_position-relative " >{{ selectelement.message }}
+                                   <div class="dropdown ms_position-absolute">
                                         <button class="btn btn-secondary dropdown-toggle ms_radius" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"></button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                           <button class="dropdown-item" type="button" @click="deletemessage(i)">Elimina messaggio</button>
@@ -94,11 +92,12 @@
                                     </div>
                                     <div class="ms_date text-end">{{ selectelement.date }}</div>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
-                    <div class="ms_bg-input ms_position-fixed ms_d-flex">
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="ms_bg-input ms_d-flex">
                         <i class="fa-regular fa-face-smile ms_link2 ms_cursor"></i>
                         <div class="ms_pl-1">
                             <input type="text" class="border" v-model.trim="mex" @keyUp.enter="currentmex">
@@ -108,9 +107,7 @@
                         </div>
                     </div>
                 </div>
-
-
-            </div>
+           </div>
         </div>
     </div>
      

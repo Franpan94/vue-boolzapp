@@ -151,10 +151,6 @@ body{
     height: 70px;
 }
 
-.ms_position-relative{
-    position: relative;
-}
-
 .ms_position-fixed{
     position: fixed;
     bottom: 0;
@@ -169,6 +165,10 @@ body{
     display: flex;
     align-items: center;
     padding-left: 20px;
+}
+
+.ms_hidden{
+    overflow-x: hidden;
 }
 
 .border{
@@ -204,3 +204,14 @@ body{
     color: grey;
     font-size: 10px;
 }
+
+.ms_position-relative{
+    position: relative;
+} 
+
+.ms_position-absolute{
+    position: absolute;
+    top: 0;
+    right: 0;
+} 
+
