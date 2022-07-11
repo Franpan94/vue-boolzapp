@@ -229,39 +229,29 @@ const app = new Vue ({
         
         },
 
-        
-        // controlname: function(){
-
-        //     console.log(this.word[0].toUpperCase())
-
-        //     if(this.word[0] != this.word[0].toUpperCase()){
-
-        //         this.word[0] = this.word[0].toUpperCase();
-                
-        //         currentname();
-
-        //     } else {
-                
-        //         currentname();
-        //     }
-
-            
-        // },
 
         currentname: function(){
             
-            
+           const b= this.word.toLowerCase() ;
 
-            if(!this.contacts[this.activeindex].name.includes(this.word)){
-                alert('nome inesistente')
+           for(let c = 0 ; c < this.contacts.length; c++){
+            
+            let a = this.contacts[c].name.toLowerCase();
+           
+           
+            if(!a.includes(b)){
+                this.contacts[c].visible = false;
             
             } else {
                 
-            
                 
-                alert('nome presente')
+                this.contacts[c].visible = true;
+                
 
             }
+
+    
+           }
         }
     }
 })

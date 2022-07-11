@@ -185,7 +185,7 @@ body{
 .ms_radius{
     background-color: white;
     border: 0;
-    font-size: 10px;
+    font-size: 15px;
     display: flex;
     align-items: flex-start;
     color: grey;
@@ -194,8 +194,13 @@ body{
 .ms_radius2{
     background-color: rgb(213, 249, 186);
     border: 0;
-    font-size: 10px;
+    font-size: 15px;
     display: flex;
     align-items: flex-start;
     color: grey;
+}
+
+.ms_date{
+    color: grey;
+    font-size: 10px;
 }
