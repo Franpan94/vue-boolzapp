@@ -223,20 +223,45 @@ const app = new Vue ({
             
         },
 
-        currentname: function(){
+        deletemessage: function(deleteindex){
 
-            let phrase = this.word;
+            this.contacts[this.activeindex].messages.splice(deleteindex,1)
+        
+        },
 
-            for(let i = 0; i < phrase.length; i++){
+        
+        // controlname: function(){
 
-                let character;
+        //     console.log(this.word[0].toUpperCase())
+
+        //     if(this.word[0] != this.word[0].toUpperCase()){
+
+        //         this.word[0] = this.word[0].toUpperCase();
                 
-                character = phrase.charAT(i);
+        //         currentname();
+
+        //     } else {
+                
+        //         currentname();
+        //     }
+
+            
+        // },
+
+        currentname: function(){
+            
+            
+
+            if(!this.contacts[this.activeindex].name.includes(this.word)){
+                alert('nome inesistente')
+            
+            } else {
+                
+            
+                
+                alert('nome presente')
+
             }
-            
-             return character;
-            
-            
         }
     }
 })

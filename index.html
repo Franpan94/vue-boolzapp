@@ -68,12 +68,17 @@
                         </div>
                     </div>
                     <div class="ms_pt8">
-                        <div  v-for="(selectelement) in contacts[activeindex].messages">
+                        <div  v-for="(selectelement, i) in contacts[activeindex].messages">
                             <div class="d-flex justify-content-end ms_p"  v-if="selectelement.status === 'sent'">
-                                <div class="message-sent" >{{ selectelement.message }}</div> 
+                                <div class="message-sent d-flex justify-content-between" >{{ selectelement.message }}
+                                    <button class="ms_radius2" @click="deletemessage(i)">X</button>
+                                </div> 
                             </div>
                              <div class="d-flex justify-content-start ms_pt-2 ms_pl-1" v-else="selectelement.status === 'received'">
-                                <div class="message-received" >{{ selectelement.message }}</div>
+                                <div class="message-received d-flex justify-content-between" >{{ selectelement.message }}
+                                    <button class="ms_radius" @click="deletemessage(i)">X</button>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
