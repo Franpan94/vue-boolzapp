@@ -10,6 +10,8 @@ const app = new Vue ({
 
         mex: '',
 
+        word: '',
+
         contacts: [
             {
                 name: 'Michele',
@@ -202,11 +204,10 @@ const app = new Vue ({
                 
                 this.contacts[this.activeindex].messages.push(obj);
                 this.mex ='';
-            }
-            
-            let replymessage;
 
-             replymessage = setTimeout (() => {
+                let replymessage;
+
+                replymessage = setTimeout (() => {
 
                 const secondobj = {
                     date: '',
@@ -217,6 +218,25 @@ const app = new Vue ({
                 this.contacts[this.activeindex].messages.push(secondobj);
 
             },1000);
+            }
+            
+            
+        },
+
+        currentname: function(){
+
+            let phrase = this.word;
+
+            for(let i = 0; i < phrase.length; i++){
+
+                let character;
+                
+                character = phrase.charAT(i);
+            }
+            
+             return character;
+            
+            
         }
     }
 })
