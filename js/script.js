@@ -232,26 +232,22 @@ const app = new Vue ({
 
         currentname: function(){
             
-           const b= this.word.toLowerCase() ;
+           const b = this.word.toLowerCase() ;
 
            for(let c = 0 ; c < this.contacts.length; c++){
             
-            let a = this.contacts[c].name.toLowerCase();
+              let a = this.contacts[c].name.toLowerCase();
            
            
-            if(!a.includes(b)){
+              if(!a.includes(b)){
                 this.contacts[c].visible = false;
             
-            } else {
-                
+              } else {
                 
                 this.contacts[c].visible = true;
-                
-
+            
+              }
             }
-
-    
-           }
         }
     }
 })

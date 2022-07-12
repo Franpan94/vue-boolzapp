@@ -74,7 +74,7 @@
                             <div class="d-flex justify-content-end ms_p"  v-if="selectelement.status === 'sent'">
                                 <div class="message-sent ms_position-relative">{{ selectelement.message }}
                                     <div class=" ms_position-absolute ms_arrow">
-                                        <i class="fa-solid fa-caret-down ms_link">
+                                        <i class="fa-solid fa-caret-down ms_link ms_cursor">
                                             <button class="ms_position-absolute2 p-1" @click="deletemessage(i)">Elimina messaggio</button>
                                          </i>
                                     </div>
@@ -84,7 +84,7 @@
                             <div class="d-flex justify-content-start ms_pt-2 ms_pl-1" v-else="selectelement.status === 'received'">
                                 <div class="message-received ms_position-relative">{{ selectelement.message }}
                                    <div class="ms_position-absolute ms_arrow">
-                                       <i class="fa-solid fa-caret-down ms_link">
+                                       <i class="fa-solid fa-caret-down ms_link ms_cursor">
                                           <button class="ms_position-absolute2 p-1" @click="deletemessage(i)">Elimina messaggio</button>
                                        </i>
                                     </div>
