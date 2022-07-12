@@ -171,7 +171,7 @@ body{
     overflow-x: hidden;
 }
 
-.border{
+.ms_border{
     border: 0;
     border-radius: 10px;
     height: 60px;
@@ -212,6 +212,25 @@ body{
 .ms_position-absolute{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 10px;
+    padding: 5px;
 } 
 
+.ms_position-absolute2{
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    font-family: Verdana, sans-serif;
+    display: none;
+    z-index: 1;
+}
+
+.ms_arrow:hover .ms_position-absolute2{
+   display: block;
+}
+
+.ms_position-absolute3{
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+}

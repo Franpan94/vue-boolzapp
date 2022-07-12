@@ -72,25 +72,23 @@
                     <div class="ms_pt8">
                         <div  v-for="(selectelement, i) in contacts[activeindex].messages">
                             <div class="d-flex justify-content-end ms_p"  v-if="selectelement.status === 'sent'">
-                                <div class="message-sent ms_inline ms_position-relative">{{ selectelement.message }}
-                                    <div class="dropdown ms_inline ms_position-absolute">
-                                        <button class="btn btn-secondary dropdown-toggle ms_radius2" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                          <button class="dropdown-item" type="button" @click="deletemessage(i)">Elimina messaggio</button>
-                                        </div>
+                                <div class="message-sent ms_position-relative">{{ selectelement.message }}
+                                    <div class=" ms_position-absolute ms_arrow">
+                                        <i class="fa-solid fa-caret-down ms_link">
+                                            <button class="ms_position-absolute2 p-1" @click="deletemessage(i)">Elimina messaggio</button>
+                                         </i>
                                     </div>
-                                    <div class="ms_date text-end">{{ selectelement.date }}</div>
+                                    <div class="ms_date ms_position-absolute3">{{ selectelement.date }}</div>
                                 </div> 
                             </div>
                             <div class="d-flex justify-content-start ms_pt-2 ms_pl-1" v-else="selectelement.status === 'received'">
-                                <div class="message-received ms_position-relative " >{{ selectelement.message }}
-                                   <div class="dropdown ms_position-absolute">
-                                        <button class="btn btn-secondary dropdown-toggle ms_radius" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                          <button class="dropdown-item" type="button" @click="deletemessage(i)">Elimina messaggio</button>
-                                        </div>
+                                <div class="message-received ms_position-relative">{{ selectelement.message }}
+                                   <div class="ms_position-absolute ms_arrow">
+                                       <i class="fa-solid fa-caret-down ms_link">
+                                          <button class="ms_position-absolute2 p-1" @click="deletemessage(i)">Elimina messaggio</button>
+                                       </i>
                                     </div>
-                                    <div class="ms_date text-end">{{ selectelement.date }}</div>
+                                    <div class="ms_date ms_position-absolute3">{{ selectelement.date }}</div>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +98,7 @@
                     <div class="ms_bg-input ms_d-flex">
                         <i class="fa-regular fa-face-smile ms_link2 ms_cursor"></i>
                         <div class="ms_pl-1">
-                            <input type="text" class="border" v-model.trim="mex" @keyUp.enter="currentmex">
+                            <input type="text" class="ms_border" v-model.trim="mex" @keyUp.enter="currentmex">
                         </div>
                         <div class="ms_pl-1">
                             <i class="fa-solid fa-microphone ms_link2 ms_cursor"></i>
@@ -110,9 +108,6 @@
            </div>
         </div>
     </div>
-     
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="./js/script.js"></script>
 </body>
 
