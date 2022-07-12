@@ -1,10 +1,10 @@
-const app = new Vue ({
+const app = new Vue({
 
     el: '#root',
 
     data: {
 
-        
+
 
         activeindex: 0,
 
@@ -179,74 +179,65 @@ const app = new Vue ({
 
     methods: {
 
-        listimage: function (newelement){
-            
-            return './img/' + 'avatar' + newelement.avatar + '.jpg' ;
-            
+        listimage: function (newelement) {
+
+            return './img/' + 'avatar' + newelement.avatar + '.jpg';
+
         },
 
-        currentimage: function (currentindex){
+        currentimage: function (currentindex) {
 
             this.activeindex = currentindex;
 
         },
 
-        currentmex: function (){
+        currentmex: function () {
 
-            if(this.mex === ''){
-
-            } else{
+            if (this.mex != '') {
+                 
                 const obj = {
+
                     date: '',
                     message: this.mex,
                     status: 'sent',
+
                 }
-                
+
                 this.contacts[this.activeindex].messages.push(obj);
-                this.mex ='';
+                this.mex = '';
 
-                let replymessage;
+                setTimeout(() => {
 
-                replymessage = setTimeout (() => {
+                    const secondobj = {
+                        
+                        date: '',
+                        message: 'Ok',
+                        status: 'received',
 
-                const secondobj = {
-                    date: '',
-                    message: 'Ok',
-                    status: 'received',
-                }
+                    }    
 
-                this.contacts[this.activeindex].messages.push(secondobj);
+                    this.contacts[this.activeindex].messages.push(secondobj);
 
-            },1000);
+                }, 1000);
             }
-            
-            
         },
 
-        deletemessage: function(deleteindex){
+        deletemessage: function (deleteindex) {
 
-            this.contacts[this.activeindex].messages.splice(deleteindex,1)
-        
+            this.contacts[this.activeindex].messages.splice(deleteindex, 1)
+
         },
 
 
-        currentname: function(){
-            
-           const b = this.word.toLowerCase() ;
+        currentname: function () {
 
-           for(let c = 0 ; c < this.contacts.length; c++){
-            
-              let a = this.contacts[c].name.toLowerCase();
-           
-           
-              if(!a.includes(b)){
-                this.contacts[c].visible = false;
-            
-              } else {
+            const currentword = this.word.toLowerCase();
+
+            for (let counter = 0; counter < this.contacts.length; counter++) {
+
+                let listcontacts = this.contacts[counter].name.toLowerCase();
                 
-                this.contacts[c].visible = true;
-            
-              }
+                this.contacts[counter].visible = listcontacts.includes(currentword);
             }
         }
     }
