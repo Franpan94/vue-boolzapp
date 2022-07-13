@@ -12,7 +12,9 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>BoolZapp</title>
 </head>
@@ -25,7 +27,7 @@
                     <div class="w-100 ms_heigth ms_bg-img p-2 d-flex justify-content-between">
                         <div>
                             <img src="./img/avatar_io.jpg" alt="Sofia" class="ms_img">
-                            <span>Sofia</span>
+                            <span class="ms_font">Sofia</span>
                         </div>
                         <div class="ms_cursor">
                             <i class="fa-solid fa-circle-notch ms_icon-width ms_pt-43"></i>
@@ -46,14 +48,18 @@
                     </div>
                     <div class="pt-3 pb-3 ms_bg_v-for">
                         <i class="fa-solid fa-magnifying-glass ms_link ms_cursor ms_pl-1"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="ms_width-input" v-model="word" @keyUp ="currentname">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="ms_width-input" v-model.trim="word" @keyUp ="currentname">
                     </div>
                     <div class="ms_height-100">
-                        <div v-for="(element, index) in contacts" class="p-2 ms_bg_v-for ms_cursor"
+                        <div v-for="(element, index) in contacts" class="p-2 ms_bg_v-for ms_cursor d-flex align-items-center"
                             :class="{active: index === activeindex}" @click="currentimage(index)"
                             v-if="element.visible">
                             <img :src="listimage(element)" alt="Img" class="ms_img">
-                            <span>{{ element.name }}</span>
+                            <div >
+                                <span class="p-2 ms_font">{{ element.name }}</span><br>
+                                <span class="p-2 ms_font2">{{ currentlastmessage(index).message }}</span><br>
+                                <span class="p-2 ms_date">{{ currentlastmessage(index).date }}</span><br>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,7 +67,7 @@
                     <div class="ms_bg-img2">
                         <div class="ms_pl-1">
                             <img :src="listimage(contacts[activeindex])" alt="Img" class="ms_img">
-                            <span class="ms_pl-5">{{ contacts[activeindex].name }}</span>
+                            <span class="ms_pl-5 ms_font">{{ contacts[activeindex].name }}</span>
                         </div>
                         <div class="ms_cursor">
                             <i class="fa-solid fa-magnifying-glass ms_link ms_pl-1"></i>

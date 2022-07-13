@@ -61,6 +61,14 @@ body{
     display: inline-block;
 }
 
+.ms_font{
+    font-weight: bold;
+}
+
+.ms_font2{
+    font-size: 15px;
+}
+
 .ms_link{
     color: grey;
 }

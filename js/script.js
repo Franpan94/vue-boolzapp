@@ -4,8 +4,6 @@ const app = new Vue({
 
     data: {
 
-
-
         activeindex: 0,
 
         mex: '',
@@ -191,13 +189,19 @@ const app = new Vue({
 
         },
 
+        currentlastmessage: function(lastindex){
+
+        return this.contacts[lastindex].messages[this.contacts[lastindex].messages.length-1]
+
+        },
+
         currentmex: function () {
 
             if (this.mex != '') {
                  
                 const obj = {
 
-                    date: '',
+                    date: moment ().format('DD/MM/YYYY HH:mm:ss'),
                     message: this.mex,
                     status: 'sent',
 
@@ -209,8 +213,8 @@ const app = new Vue({
                 setTimeout(() => {
 
                     const secondobj = {
-                        
-                        date: '',
+
+                        date: moment ().format('DD/MM/YYYY HH:mm:ss'),
                         message: 'Ok',
                         status: 'received',
 
